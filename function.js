@@ -6,7 +6,8 @@ function groupCode(){
     var Oppekoht = Code.substr(0,1);// первый символ аббревиатуры
     var OppeBaas = Code.substr(1,1);// второй символ аббревиатуры
     var OppeKeel = Code.substr(4,1);// пятый символ аббревиатуры
-    var OppeYear1 =Code.sustr(5,1);//
+    var OppeYear1 = Code.substr(5,1);// шестой символ аббревиатуры
+    var OppeYear2 =  Code.substr(6.1)// седьмой символ аббревиатуры
 
 
     //нахождение места обучения
@@ -49,7 +50,22 @@ function groupCode(){
 
     //нахождение курса
 
-    if
+    if (OppeYear2 == 0){
+        document.getElementById('resultYear').innerHTML = ('OppeKursus: 3 kurs');// если седьмой символ равен 0, то выведет 3 kurs 
+
+    }else if (OppeYear2 == 1){
+        document.getElementById('resultYear').innerHTML = ('OppeKursus: 2 kurs');// если седьмой символ равен 1, то выведет 2 kurs 
+
+    }else if (OppeYear2 == 2){
+        document.getElementById('resultYear').innerHTML = ('OppeKursus: 1 kurs');// если седьмой символ равен 2, то выведет 1 kurs
+
+    }else if (OppeYear1 == 1){
+        document.getElementById('resultYear').innerHTML = ('OppeKursus: See kursus on juba lõpetanud');//  если шестой символ равен 1, то выведет сообщение
+
+    }else{
+        document.getElementById('resultKeel').innerHTML = ('OppeKursus: sellist kursust pole veel alustatud');// если седьмой символ равен любому кроме выше перечисленных, то выведет сообщение
+
+    }
 
 
 }
